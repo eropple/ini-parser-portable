@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44C2161C-1CC8-461E-B144-319753397FEA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>INIFileParser.Portable</RootNamespace>
+    <AssemblyName>INIFileParser.Portable</AssemblyName>
+    <TargetFrameworkProfile>Profile344</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ReleaseVersion>
+    </ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="StreamIniDataParser.cs" />
+    <Compile Include="Exceptions\ParsingException.cs" />
+    <Compile Include="Helpers\Assert.cs" />
+    <Compile Include="Model\IniData.cs" />
+    <Compile Include="Model\KeyData.cs" />
+    <Compile Include="Model\KeyDataCollection.cs" />
+    <Compile Include="Model\SectionData.cs" />
+    <Compile Include="Model\SectionDataCollection.cs" />
+    <Compile Include="Model\Configuration\BaseIniParserConfiguration.cs" />
+    <Compile Include="Model\Configuration\DefaultIniParserConfiguration.cs" />
+    <Compile Include="Model\Configuration\IIniParserConfiguration.cs" />
+    <Compile Include="Model\Formatting\DefaultIniDataFormatter.cs" />
+    <Compile Include="Model\Formatting\IIniDataFormatter.cs" />
+    <Compile Include="Parser\IniDataParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.Portable.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Model\" />
+    <Folder Include="Parser\" />
+  </ItemGroup>
+</Project>
